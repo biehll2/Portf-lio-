@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.formulario { 
+	width:500px; 
+	overflow:hidden; 
+	margin: auto; 
+	background:#fff; 
+	box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+	border-radius:3px; padding:1em; 
+}
+.formulario label {
+    width:100%;
+    float:left;  
+    margin-bottom:10px; 
+}
+.formulario label span {
+	font-size:1em;
+	color: #17badf;
+	float:left;
+	margin-bottom:5px;  
+	font-family: 'open_sansregular';
+}
+.formulario .campo {
+	font-size: 0.9em;
+	color: #555;
+	font-family: 'open_sansregular';
+	outline: none;
+	border: 1px #dee5ed solid;
+	border-radius: 4px;
+	padding: 0.5em 0.7em;
+	transition:.5s; 
+}
+.formulario .campo:focus { 
+	box-shadow:0 0 5px 0px rgb(178,216,231); 
+	border:1px rgb(37,174,230) solid; 
+	color:rgb(37,174,230); 
+}
+</style>
+
+
+
+<body>
+    <form class="formulario">
+    
+        <label>  
+            
+            <span class="icon icon-phone"> Telefone</span>    
+            <input name="telefone" id="telefone" class="campo" type="text" placeholder="(21) 0000-0000">
+        
+        </label>
+        <label>  
+            
+            <span class="icon icon-whatsapp-1"> Whatsapp</span>    
+            <input name="whatsapp" id="whatsapp" class="campo" type="text" placeholder="(21) 90000-0000">
+        
+        </label>
+        <label>  
+            
+            <span class="icon icon-calendar"> Data</span>    
+            <input name="data" id="data" class="campo" type="text" placeholder="00/00/0000">
+        
+        </label>
+        <label>  
+            
+            <span class="icon icon-clock"> Hora</span>    
+            <input name="hora" id="hora" class="campo" type="text" placeholder="00:00">
+        
+        </label>
+        <label>  
+            
+            <span class="icon icon-credit-card-1"> CPF</span>    
+            <input name="cpf" id="cpf" class="campo" type="text" placeholder="999.999.999-99">
+        
+        </label>
+    </form>
+</body>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script> 
+<script type="text/javascript">
+    //mascaras
+    $(document).ready(function(){
+      $("#telefone").mask("99 9999-9999");
+      $("#whatsapp").mask("99 99999-9999");
+      $("#cpf").mask("999.999.999-99");
+      $("#data").mask("99/99/9999");
+      $("#hora").mask("99:99");
+    });
+</script>
+
+</html>
